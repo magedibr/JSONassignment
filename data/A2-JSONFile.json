@@ -14,7 +14,13 @@
     {"category" : "Perennials", "pic": "perDianthus.jpg"},
     {"category" : "Cacti", "pic": "cactiRed.jpg"}
   ],
-	"flowerlist": [
+
+
+
+
+
+
+  "flowerlist": [
     {
       "category": "Shrubs",
       "price": 15.99,

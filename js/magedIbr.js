@@ -13,6 +13,7 @@ $(document).ready(function() {
     var country;
     var city;
     var list = new Array();
+    var cats;
 
 
   /*  class category{
@@ -27,17 +28,12 @@ $(document).ready(function() {
 ->
 */
 
+    class CATE{
+        constructor (cate) {
 
-    class categorys{
-        constructor(category,name) {
-            this.name = name;
-            this.category = category;
+            this.category = cate;
         }
     }
-
-
-
-
 
     $.ajax({
         type: "GET",
@@ -51,65 +47,40 @@ $(document).ready(function() {
     function loadJSON(data) {
 
 
-        name = data.personal.myFullname;
-        student= data.personal.myStudentNumber;
+        name = data.personal["myFullname"];
+        student = data.personal.myStudentNumber;
         login = data.personal.myLoginName;
         country = data.personal.myHomeCountry;
         city = data.personal.myHomeCountry;
 
-        localStorage.setItem("name",name);
-        localStorage.setItem("student",student);
-        localStorage.setItem("login",login);
-        localStorage.setItem("country",country);
-        localStorage.setItem("city",city);
+        JSON.stringify(name);
 
 
-        const j = data.categories;
-
-       // const i = JSON.stringify(j);
+        //  console.log(student); THIS ONE
 
 
-        console.log(j);
+        /*  localStorage.setItem("name", name);
+          localStorage.setItem("student", student);
+          localStorage.setItem("login", login);
+          localStorage.setItem("country", country);
+          localStorage.setItem("city", city);*/
 
 
+        //   const i = data.categories.category;
 
-
-
-
-
+        var j = data.categories;
+        //  console.log(j);
 
 
 
+        Cats = new Array();
 
+        for (i of j) {
+                Cats.push(i.category);
+        }
 
-
-
-
-
-
+        console.log(Cats);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 })
