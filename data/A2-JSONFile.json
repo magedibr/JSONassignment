@@ -6,6 +6,8 @@
 		"myHomeCountry" : "Egypt",
 		"myCurrentCityAddress" : "Mississauga"
   },
+
+
   "categories" : [
     {"category" : "Shrubs", "pic": "shrubAzeala.jpg"},
     {"category" : "Container Plants", "pic": "cpBonsai.jpg"},
